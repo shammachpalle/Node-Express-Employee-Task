@@ -92,3 +92,26 @@ expected result:-
 }
 
 ```
+
+### Api to insert employee endpoint.
+
+```
+Method type:- post
+Api Endpoint:- http://localhost:3000/storeemployee
+
+req.body to update:-   
+{
+    "EmployeeID": 10,
+    "FirstName": "luke",
+    "LastName": "kierman",
+    "Email": "luke@gmai.com",
+    "AddressLine": "usa ",
+    "City": "newyork"
+  }
+
+expected result:- 
+{
+  "Message": "Employee successfully Registered"
+}
+
+```

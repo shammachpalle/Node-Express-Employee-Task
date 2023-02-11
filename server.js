@@ -1,6 +1,7 @@
 const express = require("express");
 const fetch = require("./fetch/fetch");
 const update = require("./update/update");
+const insert = require("./insert/insert");
 const bodyparser = require("body-parser");
 const remove = require("./delete/delete");
 
@@ -14,7 +15,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.get('/',(req,res)=>{
     res.send("Welcome user");
 })
-
+app.post("/storeemployee",insert.storeemployee)
 app.get("/getemployees", fetch.getemployees);
 app.put("/updateemplyeebyid", update.updateemplyeebyid);
 app.delete("/deleteemployee", remove.deleteemployee);
